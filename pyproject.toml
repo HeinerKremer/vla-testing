@@ -1,0 +1,26 @@
+[project]
+name = "vla-policy"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.10.9",
+    "nbconvert>=7.17.1",
+    "nbformat>=5.11.1",
+    "pillow>=12.3.0",
+    "torch>=2.14.0",
+    "transformers>=5.17.0",
+]
+
+[project.scripts]
+vla-policy = "vla_policy.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pyright]
+extraPaths = ["src"]
